@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'about_us.dart';
+import 'menu.dart';
 
 void main() {
   runApp(const FocusNetApp());
@@ -42,7 +43,12 @@ class SplashScreen extends StatelessWidget {
             // Start Detection Button
             ElevatedButton(
               onPressed: () {
-                // Add navigation or detection logic here
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HazardMenuPage(),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
